@@ -1,13 +1,115 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafc;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+p {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.app {
+  width: 80vw;
+  margin: 0; /* Removed 10vw margin for consistent filling */
+  height: 80vh;
+}
+
+.search-result {
+  margin-top: 10px;
+  overflow: scroll;
+}
+
+.input-container {
+  width: 100%;
+  border: solid 0.5px #cacaca;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: rgba(0,0,82,0.15) 0 2px 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.input-container input {
+  width: 90%;
+  border: none;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+  font-weight: 200;
+  box-sizing: border-box;
+}
+
+.input-container button {
+  min-width: 10%;
+  border: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answer {
+  padding: 13px 14px;
+  border: solid 0.5px #cacaca;
+  background-color: #fff;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 200;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  overflow: auto;
+  min-height: 100px;
+}
+
+.suggestion-button, .brainstorm-button {
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #858585;
+  font-size: 14px;
+  cursor: pointer;
+  border: solid 0.5px #cacaca;
+  padding: 10px;
+  display: inline-block; /* Changed from flex to inline-block for horizontal alignment */
+}
+
+.suggestion-container {
+  display: flex; /* Makes sure buttons are inline */
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  margin-left: 40px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #cacaca;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
 }
