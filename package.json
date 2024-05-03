@@ -17,9 +17,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "install:all": "npm i express cors dotenv @google/generative-ai",
+    "install:nodemon": "npm i nodemon",
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.js",
-    "build":  "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
